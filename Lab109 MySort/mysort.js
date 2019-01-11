@@ -4,12 +4,22 @@
 **  Oct 29, 2018
 */
 //MySort
-for (var i = 0; i < arr.length - 1; i++)
-        {
-            var index = i;
-            for (var j = i + 1; j < arr.length; j++)
-            //  Swapping Code
-            var smallerNumber = arr[index];
-            arr[index] = arr[i];
-            arr[i] = smallerNumber;
-        }
+// variables
+var num = [1,3,2];
+var min // small value?
+// MySort
+function MySort (num) {
+  for (var i = 1; i < num.length; i++){
+    var min = i
+    for (var j = 1; j < num.length; j++){
+      if (num[j] < num[min]){
+        min = j;
+      }
+    }
+    if (min != i){
+      var temp = num[min];
+      num[min] = num[i];
+      num[i] = temp;
+    }
+  }
+}
