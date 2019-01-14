@@ -1,7 +1,7 @@
 /*
-**  ColorBar Constructor Function
+**  SelectSort Constructor Function
 **  Kenza Aboulhouda
-**  Oct 29, 2018
+** Jan 14, 2019 
 */
 //selectionSort
 for (var i = 0; i < arr.length - 1; i++)

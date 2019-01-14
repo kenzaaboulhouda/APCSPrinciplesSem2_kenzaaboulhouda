@@ -1,7 +1,7 @@
 /*
-**  ColorBar Constructor Function
+**  BubbleSort Constructor Function
 **  Kenza Aboulhouda
-**  Oct 29, 2018
+**  Jan 14, 2019
 */
 //bubbleSort
 function bubbleSort(Bars){
