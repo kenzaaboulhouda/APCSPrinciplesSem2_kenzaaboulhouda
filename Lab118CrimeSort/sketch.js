@@ -25,7 +25,7 @@ function draw() {
 function bubbleSort(data) {
     var length = data.crime.length;
     //number of passes
-    console.log("i got here, " + length)
+  //  console.log("i got here, " + length)
     for (var i = 0; i < length; i++) {
 
         for (var j = 0; j < (length - i - 1); j++) {
@@ -43,5 +43,4 @@ function bubbleSort(data) {
             }
         }
     }
-    console.log("after the sort")
 }
