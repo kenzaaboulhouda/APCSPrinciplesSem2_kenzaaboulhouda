@@ -23,23 +23,25 @@ function draw() {
 }
 
 function bubbleSort(data) {
-    var length = data.length;
+    var length = data.crime.length;
     //number of passes
+    console.log("i got here, " + length)
     for (var i = 0; i < length; i++) {
 
         for (var j = 0; j < (length - i - 1); j++) {
             //Compares the adjacent positions
-            var a = data[j].crimedata.Murder;
-            var b = data[j+1].crimedata.Rape;
-            if(data[j] > data[j+1]) {
+            var a = data.crime[j].Murder;
+            var b = data.crime[j+1].Murder;
+            if(a > b) {
                 //swaps the numbers
                 //temperary variables
-                var temp = data[j];
+                var temp = data.crime[j];
                 //replace current string with adjacent string
-                data[j] = data[j+1];
+                data.crime[j] = data.crime[j+1];
                 //replace adjacent string with current string
-                data[j+1] = temp;
+                data.crime[j+1] = temp;
             }
         }
     }
+    console.log("after the sort")
 }
