@@ -14,12 +14,15 @@ function preload(){
 
 function setup() {
   //remove blank black screen
-  noCanvas();
+  var cnv = createCanvas(800, 800);
+  cnv.position((windowWidth-width)/2,30);
+  background(5,5,5);
   bubbleSort(data);
   console.log(data.crime)
 }
 
 function draw() {
+
 }
 
 function bubbleSort(data) {
