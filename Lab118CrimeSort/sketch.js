@@ -8,6 +8,7 @@
 
 //measurements
 var data = [];
+var bigTotal = 0;
 function preload(){
   data = loadJSON("data.json");
 }
@@ -22,6 +23,7 @@ function setup() {
 }
 
 function draw() {
+
 
 }
 
@@ -46,4 +48,16 @@ function bubbleSort(data) {
             }
         }
     }
+}
+function represent(){
+  for(var i = 1; i < data.crime.length; i++);
+  bigTotal = bigTotal+data.crime[i].total;
+}
+var lastAngle = 0;
+for(var i = 0; data.crime.length; i++){
+  var angle = ((data.crime[i].total / bigTotal) * (2*PI));
+  fill(174, 206, 226*i);
+  arc(300, 400, 500, 700, lastAngle, lastAngle, + angle);
+  lastAngle += angle
+
 }
