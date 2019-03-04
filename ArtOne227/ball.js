@@ -25,7 +25,7 @@ function Ball(location, velocity, radius, col){
       //if this is less than 250 away from ball
       //attract:: accelerate towards ball
       var d = this.loc.dist(b1.loc)
-      if(d < 450){
+      if(d < 200){
         var attForce = p5.Vector.sub(b1.loc, this.loc);
         attForce.normalize();
         attForce.mult(.002);
@@ -40,7 +40,7 @@ function Ball(location, velocity, radius, col){
         this.vel.add(repForce)
       }
     }
-this.vel.limit(3)
+this.vel.limit(5)
     this.loc.add(this.vel);
   }
   this.render = function(){

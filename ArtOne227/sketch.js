@@ -24,7 +24,7 @@ function loadBalls(numBalls){
 
     for(var i = 0; i < numBalls; i++){
         var loc = createVector(random(width), random(height));
-        var vel = createVector(random(-2,3), random(-2,3));
+        var vel = createVector(random(-2,4), random(-2,4));
         var rad = random(10,20);
         var col = color(242, 205, 228);
         balls.push(new Ball(loc, vel, rad, col));
