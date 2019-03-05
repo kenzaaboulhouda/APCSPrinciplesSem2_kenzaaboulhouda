@@ -44,11 +44,12 @@ this.vel.limit(5)
     this.loc.add(this.vel);
   }
   this.render = function(){
-   stroke(13, 216, 2);
-    strokeWeight(2.5);
+   stroke(209, 209, 209);
+    strokeWeight(5);
     line(this.loc.x, this.loc.y, balls[0].loc.x, balls[0].loc.y)
-    //fill(this.col);
-    //ellipse(this.loc.x, this.loc.y, this.rad, this.rad);
+    fill(this.col);
+    ellipse(this.loc.x, this.loc.y, this.rad, this.rad);
+
   }
 
   //checkEdges() reverses speed when the ball touches an edge
