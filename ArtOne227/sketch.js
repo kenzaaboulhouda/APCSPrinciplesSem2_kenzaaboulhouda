@@ -9,7 +9,7 @@ function setup() {
   background(203, 227, 239);
   b1= new Ball(createVector(width/2,height/2),
 createVector(.5,-.8),25, color(242, 205, 228));
-  loadBalls(150);  //  !!!!!!!!!!  this is a function call
+  loadBalls(500);  //  !!!!!!!!!!  this is a function call
 }
 
 function draw() {
