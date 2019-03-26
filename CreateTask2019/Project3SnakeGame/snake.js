@@ -1,5 +1,5 @@
 /*
-** snake Constructor Function
+** Snake Constructor Function
 **  Kenza Aboulhouda
 **  October 4, 2018
 */
@@ -38,7 +38,7 @@ function Snake(loc, vel){
       stroke(121, 139, 19);
       rect(this.segments[i].x, this.segments[i].y, 20, 20)
     }
-    fill(29, 220, 69);
+    fill(195, 206, 224);
     rect(this.loc.x, this.loc.y, 20, 20);
   }
 

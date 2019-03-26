@@ -26,7 +26,7 @@ function setup(){
 }
 //draw functions
 function draw(){
-  background(160, 196, 211);
+  background(233, 184, 239);
   snake.run();
   //score count
   textSize(50);
@@ -112,7 +112,7 @@ function deadGame(){
   if(snake.status == "true"){
     snake = 0
     score = 0;
-    text("Good try bud, refresh for more fun", 400, 400);
+    text("you're not too good at this", 400, 400);
     loadSnake();
     gameStart();
     gameover();
@@ -123,14 +123,14 @@ function deadGame(){
 function gameStart(){
   if(start == "true"){
     textFont()
-    fill(10, 250, 50);
+    fill(182, 219, 198);
     rect(225, 300, 350, 200);
-    fill(0,0,0);
+    fill(239, 239, 230);
     rect(240, 315, 320, 170)
     fill(150, 200, 70);
     textAlign(CENTER);
-    textSize(49);
-    text("Snake Survival", 400, 435)
+    textSize(47);
+    text("SnaKe GAme", 400, 435)
   }
 }
 //score function with win function as well.
