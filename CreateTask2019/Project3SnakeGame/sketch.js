@@ -10,7 +10,7 @@ var numSeg = 1;
 var start = "true"
 var font;
 var score = 0;
-var timer = 100;
+var timeRemaining;
 
 //standarn setup
 function setup(){
@@ -26,7 +26,7 @@ function setup(){
 }
 //draw functions
 function draw(){
-  background(233, 184, 239);
+  background(235, 218, 237);
   snake.run();
   //score count
   textSize(50);
@@ -39,22 +39,13 @@ function draw(){
     //timer function
     textAlign(700, 100);
       textSize(50);
-      text(timer, 730, 70);
-      if (frameCount % 600 == 0 && timer > 0) {
-    timer --;
-  }
-  //game over function of the timer
-  if (timer == 0) {
-    text("GAME OVER", width/2, height*0.7);
-    gameover();
-  }
-
   }
 //fucntions
   checkLoc();
   deadGame();
   gameStart();
   Score();
+  snake.timer();
 }
 //checking location of the food
 function checkLoc(){
@@ -138,6 +129,12 @@ function Score(){
   if (score > 99){
   fill(255, 0, 5);
   textAlign(CENTER);
-  text("YOU WON!!!!!!", 400, 400);
+  text("good job", 400, 400);
+  }
+  snake.timer();
+  text(snake.timeRemaining, 0, 100, 1450);
+  noStroke();
+  if (snake.timeRemaining === 0){
+    deadGame();
   }
 }
