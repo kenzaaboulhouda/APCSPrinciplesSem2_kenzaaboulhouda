@@ -22,11 +22,12 @@ function setup(){
   background(70, 200, 30);
   loadSnake();
   loadFood(100);
+  img= loadImage("mouse.png");
   //load in 100 food and have it become depleted
 }
 //draw functions
 function draw(){
-  background(235, 218, 237);
+  background(109, 147, 133);
   snake.run();
   //score count
   textSize(50);
@@ -53,9 +54,8 @@ function checkLoc(){
     var distX = food[i].loc.x - snake.loc.x;
     var distY = food[i].loc.y - snake.loc.y;
     if(distX == (0) && distY == (0)){
-      food.splice(i, 1);
       //removes the food
-      //would add in a new food if that was the way I wanted it to be
+      food.splice(i, 1);
       loadFood(0);
       snake.segments.push(createVector(0, 0));
       console.log(snake.segments.length)
