@@ -38,7 +38,7 @@ function Snake(loc, vel){
     for(var i = 0; i < this.segments.length; i++){
       fill(69, 68, 89);
       stroke(121, 139, 19);
-      rect(this.segments[i].x, this.segments[i].y, 20, 20)
+      image(img2,this.segments[i].x, this.segments[i].y, 40, 40);
     }
     fill(195, 206, 224);
     rect(this.loc.x, this.loc.y, 20, 20);

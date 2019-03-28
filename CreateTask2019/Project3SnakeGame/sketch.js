@@ -23,11 +23,12 @@ function setup(){
   loadSnake();
   loadFood(100);
   img= loadImage("mouse.png");
+  img2 = loadImage("snake.png");
   //load in 100 food and have it become depleted
 }
 //draw functions
 function draw(){
-  background(109, 147, 133);
+  background(255, 255, 255);
   snake.run();
   //score count
   textSize(50);
