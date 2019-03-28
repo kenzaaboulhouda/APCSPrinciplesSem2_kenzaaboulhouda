@@ -21,13 +21,10 @@ function setup(){
   cnv.position((windowWidth-width)/2, 30);
   background(70, 200, 30);
   loadSnake();
-<<<<<<< HEAD
   loadFood(50);
-=======
   loadFood(100);
   img= loadImage("mouse.png");
   img2 = loadImage("snake.png");
->>>>>>> 771ceefe52e69994277d478852f9fc2f7ea2ddf9
   //load in 100 food and have it become depleted
 }
 //draw functions
