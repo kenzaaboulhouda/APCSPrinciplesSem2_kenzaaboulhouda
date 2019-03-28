@@ -10,7 +10,6 @@ function Snake(loc, vel){
   this.segments = [];
   this.status = "false";
   this.timeRemaining = 100
-
   //other functions of the snake
   this.run = function(){
     this.update();
@@ -41,7 +40,7 @@ function Snake(loc, vel){
       image(img2,this.segments[i].x, this.segments[i].y, 40, 40);
     }
     fill(195, 206, 224);
-    rect(this.loc.x, this.loc.y, 20, 20);
+    image(img2,this.loc.x, this.loc.y, 40, 40);
   }
   //the snakes death function
   this.dead = function(){
@@ -55,7 +54,7 @@ function Snake(loc, vel){
     }
   }
   this.timer = function () {
-    
+
     if (frameCount % 10 === 0 && this.timeRemaining > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
       this.timeRemaining --;
     }
