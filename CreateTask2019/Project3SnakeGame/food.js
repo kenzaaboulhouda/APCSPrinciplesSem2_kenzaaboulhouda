@@ -16,7 +16,11 @@ function Food(loc){
   this.render = function(){
     fill(244, 152, 66);
     stroke(255);
+<<<<<<< HEAD
     rect(this.loc.x, this.loc.y, 20,20);
+=======
+  image(img, this.loc.x, this.loc.y, 40,40);
+>>>>>>> 771ceefe52e69994277d478852f9fc2f7ea2ddf9
     stroke(121, 139, 19);
   }
 }
