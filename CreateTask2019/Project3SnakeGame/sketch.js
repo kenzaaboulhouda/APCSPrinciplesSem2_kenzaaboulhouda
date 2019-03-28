@@ -21,7 +21,7 @@ function setup(){
   cnv.position((windowWidth-width)/2, 30);
   background(70, 200, 30);
   loadSnake();
-  loadFood(100);
+  loadFood(50);
   //load in 100 food and have it become depleted
 }
 //draw functions
@@ -38,9 +38,9 @@ function draw(){
     food[i].run();
     //timer function
     textAlign(700, 100);
-      textSize(50);
+    textSize(50);
   }
-//fucntions
+  //fucntions
   checkLoc();
   deadGame();
   gameStart();
@@ -101,9 +101,10 @@ function keyPressed(){
 //game over function
 function deadGame(){
   if(snake.status == "true"){
+    start = "true";
     snake = 0
     score = 0;
-    text("you're not too good at this", 400, 400);
+    //text("you're not too good at this", 400, 400);
     loadSnake();
     gameStart();
     gameover();
@@ -127,14 +128,14 @@ function gameStart(){
 //score function with win function as well.
 function Score(){
   if (score > 99){
-  fill(255, 0, 5);
-  textAlign(CENTER);
-  text("good job", 400, 400);
+    fill(255, 0, 5);
+    textAlign(CENTER);
+    text("good job", 400, 400);
   }
-  snake.timer();
   text(snake.timeRemaining, 0, 100, 1450);
   noStroke();
   if (snake.timeRemaining === 0){
+    snake.status = "true";
     deadGame();
   }
 }

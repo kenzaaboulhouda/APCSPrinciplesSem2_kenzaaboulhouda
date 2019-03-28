@@ -4,21 +4,21 @@
 **  October 4, 2018
 */
 function Snake(loc, vel){
-//what the snake needs to know
+  //what the snake needs to know
   this.loc = loc;
   this.vel = vel;
   this.segments = [];
   this.status = "false";
   this.timeRemaining = 100
 
-//other functions of the snake
+  //other functions of the snake
   this.run = function(){
     this.update();
     this.render();
     this.dead();
     this.timer();
   }
-//snakes movement
+  //snakes movement
   this.update = function(){
     for(var i = this.segments.length - 1; i >= 0; i--){
       if(i > 0){
@@ -33,7 +33,7 @@ function Snake(loc, vel){
     this.loc.x = constrain(this.loc.x, 0, 800-20)
     this.loc.y = constrain(this.loc.y, 0, 800-20)
   }
-//render function of the snake
+  //render function of the snake
   this.render = function(){
     for(var i = 0; i < this.segments.length; i++){
       fill(69, 68, 89);
@@ -43,8 +43,7 @@ function Snake(loc, vel){
     fill(195, 206, 224);
     rect(this.loc.x, this.loc.y, 20, 20);
   }
-
-//the snakes death function
+  //the snakes death function
   this.dead = function(){
     for(var i = 0; i < this.segments.length; i++){
       var distX = this.loc.x - this.segments[i].x;
@@ -56,14 +55,12 @@ function Snake(loc, vel){
     }
   }
   this.timer = function () {
-
-     if (frameCount % 10 === 0 && this.timeRemaining > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
-       this.timeRemaining --;
-     }
-     if (this.timeRemaining === 0) {
-    this.dead();
-     }
-
- }
-
+    
+    if (frameCount % 10 === 0 && this.timeRemaining > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+      this.timeRemaining --;
+    }
+    if (this.timeRemaining === 0) {
+      this.dead();
+    }
+  }
 }
