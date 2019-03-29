@@ -21,7 +21,7 @@ function setup(){
   cnv.position((windowWidth-width)/2, 30);
   background(70, 200, 30);
   loadSnake();
-  loadFood(50);
+  loadFood(30);
   loadFood(100);
   img= loadImage("mouse.png");
   img2 = loadImage("snake.png");
@@ -103,28 +103,31 @@ function keyPressed(){
 //game over function
 function deadGame(){
   if(snake.status == "true"){
-    start = "true";
+    start = "false";
     snake = 0
     score = 0;
-    //text("you're not too good at this", 400, 400);
-    loadSnake();
-    gameStart();
-    gameover();
+    text("you're not too good at this", 400, 400);
+  text("refresh to start again", 400, 500);
+    //loadSnake();
+  //  gameStart();
+    //gameover();
 
   }
 }
 //pop up page of the beginning of the game
 function gameStart(){
   if(start == "true"){
+    background(208, 220, 239);
     textFont()
-    fill(182, 219, 198);
-    rect(225, 300, 350, 200);
-    fill(239, 239, 230);
-    rect(240, 315, 320, 170)
-    fill(150, 200, 70);
+    // fill(182, 219, 198);
+    // rect(225, 300, 350, 200);
+    // fill(239, 239, 230);
+    // rect(240, 315, 320, 170)
+    // fill(150, 200, 70);
     textAlign(CENTER);
     textSize(47);
-    text("SnaKe GAme", 400, 435)
+    text("SnaKe GAng", 400, 435)
+    text("press any arrow key to start", 400, 250)
   }
 }
 //score function with win function as well.
